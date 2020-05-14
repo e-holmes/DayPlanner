@@ -1,0 +1,21 @@
+.height{
+    height: 20%;
+} 
+
+.display-block {
+    display: initial;
+  }
+  
+.display-none {
+    display: none;
+  }
+
+
+.navbar{
+    border-bottom: 5px solid rgb(117, 198, 176);
+  }
+  
+  .title-font{
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.5rem;
+    } 

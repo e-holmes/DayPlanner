@@ -1,4 +1,4 @@
-const db = require("../../BOOTCAMP/HOMEWORK/Cheap-Cheep/models");
+const db = require("../../DayPlanner/models");
 
 // Defining methods for the userController
 module.exports = {
