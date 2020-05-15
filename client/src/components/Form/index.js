@@ -1,12 +1,12 @@
 import React from "react";
-import "./style.css";
 
-function Form(prop) {
+
+function Form(props) {
     return (
         <div>
-            <label htmlFor={prop.idName}></label>
-            <input type={prop.type} name={prop.name} onChange={prop.onChange} placeholder={prop.placeholder} 
-            className="form-control" id={prop.idName} value={prop.value} />
+            <label htmlFor={props.idName}></label>
+            <input type={props.type} name={props.name} onChange={props.onChange} placeholder={props.placeholder} 
+            className="form-control" id={props.idName} value={props.value} />
         </div>
     )
 }

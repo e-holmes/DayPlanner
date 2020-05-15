@@ -3,7 +3,7 @@ import API from "../../utils/API";
 import { Formik } from "formik";
 import * as Yup from "yup";
 
-const ValidatedLoginForm = () => (
+const ValidatedRegisterForm = () => (
     <Formik
         initialValues={{ email: "", password: "" }}
         onSubmit={(values, { setSubmitting }) => {
@@ -77,4 +77,4 @@ const ValidatedLoginForm = () => (
     </Formik>
 );
 
-export default ValidatedLoginForm;
+export default ValidatedRegisterForm;

@@ -1,14 +1,16 @@
 import React from "react";
-import "./style.css";
 
-function Card(props) {
+
+
+function InfoCard(props) {
     return (
-        <div>
-        <div className="card-body price-font">
-          {props.children}
+        <div className="card">
+            <h2 className="card-title mt-4 text-center">{props.header}</h2>
+            <div className="card-text">
+                {props.body}
+            </div>
         </div>
-      </div>
     )
 }
 
-export default Card;
+export default InfoCard;
