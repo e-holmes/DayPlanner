@@ -3,7 +3,7 @@ const db = require("../models");
 
 // This file empties the user collection and inserts the books below
 
-mongoose.connect( process.env.MONGODB_URI ||"mongodb://localhost/CheapCheep" , () => {
+mongoose.connect( process.env.MONGODB_URI ||"mongodb://localhost/DayPlanner" , () => {
   console.log('connecting Seed to database')
 })
 
@@ -22,14 +22,3 @@ const userSeed = [
   }
 ]
 
-
-
-db.User
-  .remove({})
-  .then(() => db.User.collection.insertMany(userSeed))
-  .then(data => {
-    console.log(data.result.n + " records inserted!");
-  })
-  .catch(err => {
-    console.error(err);
-  });

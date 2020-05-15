@@ -2,50 +2,53 @@ import React, { Component } from "react";
 import "./style.css";
 import API from "../../utils/API";
 import { Row, Col } from "../Grid";
+import ValidatedLoginForm from "../ValidatedLoginForm"
 // import { Link } from "react-router-dom";
 
 class Registration extends Component {
 
     // Setting the component's initial state
-    state = {
-        username: "",
-        password: "",
-        email: ""
-    };
+    // state = {
+    //     username: "",
+    //     password: "",
+    //     email: ""
+    // };
 
-    handleInputChange = event => {
-        // Getting the value and name of the input which triggered the change
-        const { name, value } = event.target;
+    // handleInputChange = event => {
+    //     // Getting the value and name of the input which triggered the change
+    //     const { name, value } = event.target;
 
-        // Updating the input's state
-        this.setState({
-            [name]: value
-        });
-    };
+    //     // Updating the input's state
+    //     this.setState({
+    //         [name]: value
+    //     });
+    // };
 
-    handleFormSubmit = event => {
-        // Preventing the default behavior of the form submit (which is to refresh the page)
-        event.preventDefault();
+    // handleFormSubmit = event => {
+    //     // Preventing the default behavior of the form submit (which is to refresh the page)
+    //     event.preventDefault();
 
-        if (this.state.username && this.state.password && this.state.email) {
-            API.saveUser({
-                userName: this.state.username,
-                password: this.state.password,
-                email: this.state.email
+    //     if (this.state.password.length >= 6) {
+    //         if (this.state.username && this.state.password && this.state.email) {
+    //             API.saveUser({
+    //                 userName: this.state.username,
+    //                 password: this.state.password,
+    //                 email: this.state.email
 
-            })
-                .catch(err => console.log(err));
+    //             })
+    //                 .catch(err => console.log(err));
 
-            // Alert the user their first and last name, clear `this.state.firstName` and `this.state.lastName`, clearing the inputs
-            alert(`Account Created: username: ${this.state.username} password: ${this.state.password} email: ${this.state.email}`);
-            this.setState({
-                username: "",
-                password: "",
-                email: ""
+    //             this.setState({
+    //                 username: "",
+    //                 password: "",
+    //                 email: ""
 
-            })
-        }
-    };
+    //             })
+    //         }
+    //     } else {
+    //         alert("Password too short");
+    //     }
+    // };
 
     render() {
         return (
@@ -60,7 +63,8 @@ class Registration extends Component {
                 </div>
                 <Row>
                     <Col size="12">
-                        <form className="form align-content-center">
+                        <ValidatedLoginForm/>
+                        {/* <form className="form align-content-center">
                             <div className="inputForm">
                                 <Col size="md-6" className="form-group">
                                     <label htmlFor="username">Username</label>
@@ -99,7 +103,14 @@ class Registration extends Component {
                             <div className="submit-btn">
                                 <button className="btn btn-success align-self-center" onClick={this.handleFormSubmit}>Submit</button>
                             </div>
-                        </form>
+                        </form> */}
+                        {/* <div id="message">
+                            <h3>Password must contain the following:</h3>
+                            <p id="letter" className="invalid">A <b>lowercase</b> letter</p>
+                            <p id="capital" className="invalid">A <b>capital (uppercase)</b> letter</p>
+                            <p id="number" className="invalid">A <b>number</b></p>
+                            <p id="length" className="invalid">Minimum <b>8 characters</b></p>
+                        </div> */}
                     </Col>
                 </Row>
             </div>

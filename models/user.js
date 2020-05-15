@@ -10,12 +10,9 @@ const UserSchema = new Schema({
   password: {
     type: String,
     trim: true,
-    required: "Password is Required",
-    validate: [
-      function (input) {
-        return input.length >= 6;
-      },
-      "Password should be longer."
+    required: true,
+    minlength: [
+      6, "Password should be longer."
     ]
   },
   email: {
@@ -25,6 +22,7 @@ const UserSchema = new Schema({
 
   }
 });
+
 const User = mongoose.model("User", UserSchema);
 
 module.exports = User;

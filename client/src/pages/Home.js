@@ -16,15 +16,13 @@ class Login extends Component {
         <Row>
           <Col size="6">
           <InfoCard
-            listOne="Easy"
-            listTwo="Organized"
-            listThree="Cheap on your budget"
+            listOne="Manage your life in one convient spot."
+            listTwo="Create and manage to do lists."
+            listThree="Set your goals and don't forget them."
           ></InfoCard>
           </Col>
           <Col size="6">
           <Registration
-            // <Link to={"/books/" + book._id}>
-
             onClick={this.handleFormSubmit}
           ></Registration>
           </Col>
