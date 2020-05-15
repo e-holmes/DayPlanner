@@ -1,15 +1,13 @@
 import React from "react";
+import listItem from "./listItem"
 import "./style.css";
 
 
 function InfoCard(prop) {
     return (
         <div className="card">
-            <h2 className="font-weight-bold"><u>Makes Shopping</u></h2>
-            <ul className="list">
-                <li className="mt-3">{prop.listOne}</li>
-                <li>{prop.listTwo}</li>
-                <li>{prop.listThree}</li>
+            <h2 className="card-title mt-4 text-center">{props.}</h2>
+            <ul className="list card-text">
             </ul>
         </div>
     )

@@ -17,19 +17,19 @@ module.exports = {
   },
   login: function (req, res) {
     db.User
-      .findOne({ userName: req.body.userName })
+      .findOne({ email: req.body.email })
       .then(function (dbResult) {
         var userData = {
           found: true,
           userID: -1
         }
 
-        //here we catch if the username and password both match the request. We return the userID.
-        if (!dbResult.userName) {
+        //here we catch if the email and password both match the request. We return the userID.
+        if (!dbResult.email) {
           userData.found = false;
 
-          //here we test the username and password. If they match, we add the user's id to the response.
-        } else if (dbResult.userName === req.body.userName && dbResult.password === req.body.password) {
+          //here we test the email and password. If they match, we add the user's id to the response.
+        } else if (dbResult.email === req.body.email && dbResult.password === req.body.password) {
           userData.userID = dbResult._id;
         }
         // userdata goes back regardless. If neither of the above cases applies, 
