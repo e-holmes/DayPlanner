@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import {Container, Row, Col} from "../components/Grid";
+import Table from "../components/Table";
+import Goals from "../components/Goals";
 
 // import Saved from "../pages/Saved"
 // import List from "../pages/list"
@@ -13,9 +15,17 @@ class Login extends Component {
       <Container>
         <Row>
           <Col size="6">
+            <Table
+          
+            ></Table>
           </Col>
           <Col size="6">
-            <p>Hello</p>
+            <Row>
+              <Goals></Goals>
+            </Row>
+            <Row>
+              <p>To Do</p>
+            </Row>
           </Col>
         </Row>
       </Container>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ValidatedLoginForm from "../components/ValidatedRegisterForm";
+import ValidatedRegisterForm from "../components/ValidatedRegisterForm";
 import style from "../assets/css/style.css"
 import { Container, Row, Col } from "../components/Grid";
 
@@ -36,7 +36,7 @@ class Login extends Component {
               </Row>
               <Row>
                 <Col size="12">
-                  <ValidatedLoginForm />
+                  <ValidatedRegisterForm />
                 </Col>
               </Row>
             </div>
