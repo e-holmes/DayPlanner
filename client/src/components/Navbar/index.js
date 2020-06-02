@@ -10,7 +10,7 @@ function Navbar(props) {
         <h1 className="title-font text-center navbar-text">
           {props.title}
         </h1>
-        <div classname="title-font">
+        <div className="title-font">
           {props.login}
         </div>
     </nav>
